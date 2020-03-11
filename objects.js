@@ -1,15 +1,15 @@
 var playlist = {
-
+  'Lindsey Stirling': 'Artiemis',
+  'Within Tempatation': 'All I Need',
+  'BTS': 'Love Yourself'
 }
 
 function updatePlaylist(playlist, artist, song) {
-  return Object.assign({}, playlist, { [artist]: song })
+  playlist[artist] = song;
+  return playlist;
 }
-
-updatePlaylist()
 
 function removeFromPlaylist(playlist, artist) {
-  delete playlist.artist;
+  delete playlist[artist];
+  return playlist;
 }
-
-playlist;
